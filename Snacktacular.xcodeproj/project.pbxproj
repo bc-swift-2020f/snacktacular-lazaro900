@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F15354DC254DD6CD000A7855 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15354DB254DD6CD000A7855 /* AppDelegate.swift */; };
+		F15354DE254DD6CD000A7855 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15354DD254DD6CD000A7855 /* SceneDelegate.swift */; };
+		F15354E0254DD6CD000A7855 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15354DF254DD6CD000A7855 /* ViewController.swift */; };
+		F15354E3254DD6CD000A7855 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15354E1254DD6CD000A7855 /* Main.storyboard */; };
+		F15354E5254DD6D1000A7855 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15354E4254DD6D1000A7855 /* Assets.xcassets */; };
+		F15354E8254DD6D1000A7855 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15354E6254DD6D1000A7855 /* LaunchScreen.storyboard */; };
+		F15354F3254DD6D1000A7855 /* SnacktacularTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15354F2254DD6D1000A7855 /* SnacktacularTests.swift */; };
+		F15354FE254DD6D1000A7855 /* SnacktacularUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15354FD254DD6D1000A7855 /* SnacktacularUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F15354EF254DD6D1000A7855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F15354D0254DD6CD000A7855 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F15354D7254DD6CD000A7855;
+			remoteInfo = Snacktacular;
+		};
+		F15354FA254DD6D1000A7855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F15354D0254DD6CD000A7855 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F15354D7254DD6CD000A7855;
+			remoteInfo = Snacktacular;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F15354D8254DD6CD000A7855 /* Snacktacular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snacktacular.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F15354DB254DD6CD000A7855 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F15354DD254DD6CD000A7855 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F15354DF254DD6CD000A7855 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F15354E2254DD6CD000A7855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F15354E4254DD6D1000A7855 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F15354E7254DD6D1000A7855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F15354E9254DD6D1000A7855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F15354EE254DD6D1000A7855 /* SnacktacularTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnacktacularTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F15354F2254DD6D1000A7855 /* SnacktacularTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnacktacularTests.swift; sourceTree = "<group>"; };
+		F15354F4254DD6D1000A7855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F15354F9254DD6D1000A7855 /* SnacktacularUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnacktacularUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F15354FD254DD6D1000A7855 /* SnacktacularUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnacktacularUITests.swift; sourceTree = "<group>"; };
+		F15354FF254DD6D1000A7855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F15354D5254DD6CD000A7855 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15354EB254DD6D1000A7855 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15354F6254DD6D1000A7855 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F15354CF254DD6CD000A7855 = {
+			isa = PBXGroup;
+			children = (
+				F15354DA254DD6CD000A7855 /* Snacktacular */,
+				F15354F1254DD6D1000A7855 /* SnacktacularTests */,
+				F15354FC254DD6D1000A7855 /* SnacktacularUITests */,
+				F15354D9254DD6CD000A7855 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F15354D9254DD6CD000A7855 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F15354D8254DD6CD000A7855 /* Snacktacular.app */,
+				F15354EE254DD6D1000A7855 /* SnacktacularTests.xctest */,
+				F15354F9254DD6D1000A7855 /* SnacktacularUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F15354DA254DD6CD000A7855 /* Snacktacular */ = {
+			isa = PBXGroup;
+			children = (
+				F15354DB254DD6CD000A7855 /* AppDelegate.swift */,
+				F15354DD254DD6CD000A7855 /* SceneDelegate.swift */,
+				F15354DF254DD6CD000A7855 /* ViewController.swift */,
+				F15354E1254DD6CD000A7855 /* Main.storyboard */,
+				F15354E4254DD6D1000A7855 /* Assets.xcassets */,
+				F15354E6254DD6D1000A7855 /* LaunchScreen.storyboard */,
+				F15354E9254DD6D1000A7855 /* Info.plist */,
+			);
+			path = Snacktacular;
+			sourceTree = "<group>";
+		};
+		F15354F1254DD6D1000A7855 /* SnacktacularTests */ = {
+			isa = PBXGroup;
+			children = (
+				F15354F2254DD6D1000A7855 /* SnacktacularTests.swift */,
+				F15354F4254DD6D1000A7855 /* Info.plist */,
+			);
+			path = SnacktacularTests;
+			sourceTree = "<group>";
+		};
+		F15354FC254DD6D1000A7855 /* SnacktacularUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F15354FD254DD6D1000A7855 /* SnacktacularUITests.swift */,
+				F15354FF254DD6D1000A7855 /* Info.plist */,
+			);
+			path = SnacktacularUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F15354D7254DD6CD000A7855 /* Snacktacular */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1535502254DD6D1000A7855 /* Build configuration list for PBXNativeTarget "Snacktacular" */;
+			buildPhases = (
+				F15354D4254DD6CD000A7855 /* Sources */,
+				F15354D5254DD6CD000A7855 /* Frameworks */,
+				F15354D6254DD6CD000A7855 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Snacktacular;
+			productName = Snacktacular;
+			productReference = F15354D8254DD6CD000A7855 /* Snacktacular.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F15354ED254DD6D1000A7855 /* SnacktacularTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1535505254DD6D1000A7855 /* Build configuration list for PBXNativeTarget "SnacktacularTests" */;
+			buildPhases = (
+				F15354EA254DD6D1000A7855 /* Sources */,
+				F15354EB254DD6D1000A7855 /* Frameworks */,
+				F15354EC254DD6D1000A7855 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F15354F0254DD6D1000A7855 /* PBXTargetDependency */,
+			);
+			name = SnacktacularTests;
+			productName = SnacktacularTests;
+			productReference = F15354EE254DD6D1000A7855 /* SnacktacularTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F15354F8254DD6D1000A7855 /* SnacktacularUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1535508254DD6D1000A7855 /* Build configuration list for PBXNativeTarget "SnacktacularUITests" */;
+			buildPhases = (
+				F15354F5254DD6D1000A7855 /* Sources */,
+				F15354F6254DD6D1000A7855 /* Frameworks */,
+				F15354F7254DD6D1000A7855 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F15354FB254DD6D1000A7855 /* PBXTargetDependency */,
+			);
+			name = SnacktacularUITests;
+			productName = SnacktacularUITests;
+			productReference = F15354F9254DD6D1000A7855 /* SnacktacularUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F15354D0254DD6CD000A7855 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					F15354D7254DD6CD000A7855 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					F15354ED254DD6D1000A7855 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = F15354D7254DD6CD000A7855;
+					};
+					F15354F8254DD6D1000A7855 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = F15354D7254DD6CD000A7855;
+					};
+				};
+			};
+			buildConfigurationList = F15354D3254DD6CD000A7855 /* Build configuration list for PBXProject "Snacktacular" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F15354CF254DD6CD000A7855;
+			productRefGroup = F15354D9254DD6CD000A7855 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F15354D7254DD6CD000A7855 /* Snacktacular */,
+				F15354ED254DD6D1000A7855 /* SnacktacularTests */,
+				F15354F8254DD6D1000A7855 /* SnacktacularUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F15354D6254DD6CD000A7855 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F15354E8254DD6D1000A7855 /* LaunchScreen.storyboard in Resources */,
+				F15354E5254DD6D1000A7855 /* Assets.xcassets in Resources */,
+				F15354E3254DD6CD000A7855 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15354EC254DD6D1000A7855 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15354F7254DD6D1000A7855 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F15354D4254DD6CD000A7855 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F15354E0254DD6CD000A7855 /* ViewController.swift in Sources */,
+				F15354DC254DD6CD000A7855 /* AppDelegate.swift in Sources */,
+				F15354DE254DD6CD000A7855 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15354EA254DD6D1000A7855 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F15354F3254DD6D1000A7855 /* SnacktacularTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15354F5254DD6D1000A7855 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F15354FE254DD6D1000A7855 /* SnacktacularUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F15354F0254DD6D1000A7855 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F15354D7254DD6CD000A7855 /* Snacktacular */;
+			targetProxy = F15354EF254DD6D1000A7855 /* PBXContainerItemProxy */;
+		};
+		F15354FB254DD6D1000A7855 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F15354D7254DD6CD000A7855 /* Snacktacular */;
+			targetProxy = F15354FA254DD6D1000A7855 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F15354E1254DD6CD000A7855 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F15354E2254DD6CD000A7855 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F15354E6254DD6D1000A7855 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F15354E7254DD6D1000A7855 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F1535500254DD6D1000A7855 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F1535501254DD6D1000A7855 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F1535503254DD6D1000A7855 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WATT3KK847;
+				INFOPLIST_FILE = Snacktacular/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Alvelaez.Snacktacular;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F1535504254DD6D1000A7855 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WATT3KK847;
+				INFOPLIST_FILE = Snacktacular/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Alvelaez.Snacktacular;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F1535506254DD6D1000A7855 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WATT3KK847;
+				INFOPLIST_FILE = SnacktacularTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Alvelaez.SnacktacularTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Snacktacular.app/Snacktacular";
+			};
+			name = Debug;
+		};
+		F1535507254DD6D1000A7855 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WATT3KK847;
+				INFOPLIST_FILE = SnacktacularTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Alvelaez.SnacktacularTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Snacktacular.app/Snacktacular";
+			};
+			name = Release;
+		};
+		F1535509254DD6D1000A7855 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WATT3KK847;
+				INFOPLIST_FILE = SnacktacularUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Alvelaez.SnacktacularUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Snacktacular;
+			};
+			name = Debug;
+		};
+		F153550A254DD6D1000A7855 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WATT3KK847;
+				INFOPLIST_FILE = SnacktacularUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Alvelaez.SnacktacularUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Snacktacular;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F15354D3254DD6CD000A7855 /* Build configuration list for PBXProject "Snacktacular" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1535500254DD6D1000A7855 /* Debug */,
+				F1535501254DD6D1000A7855 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1535502254DD6D1000A7855 /* Build configuration list for PBXNativeTarget "Snacktacular" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1535503254DD6D1000A7855 /* Debug */,
+				F1535504254DD6D1000A7855 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1535505254DD6D1000A7855 /* Build configuration list for PBXNativeTarget "SnacktacularTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1535506254DD6D1000A7855 /* Debug */,
+				F1535507254DD6D1000A7855 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1535508254DD6D1000A7855 /* Build configuration list for PBXNativeTarget "SnacktacularUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1535509254DD6D1000A7855 /* Debug */,
+				F153550A254DD6D1000A7855 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F15354D0254DD6CD000A7855 /* Project object */;
+}
