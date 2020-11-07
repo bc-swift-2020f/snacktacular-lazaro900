@@ -117,6 +117,9 @@
                                     <segment title="Rating"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="sortSegmentPressed:" destination="wnx-Vf-PX2" eventType="valueChanged" id="O8R-wL-ZQO"/>
+                                </connections>
                             </segmentedControl>
                         </barButtonItem>
                     </toolbarItems>
