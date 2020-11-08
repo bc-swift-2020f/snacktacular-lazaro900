@@ -18,7 +18,7 @@ class SpotDetailViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     @IBOutlet weak var tableView: UITableView!
-    var reviews: [String] = ["tasty", "horrible","tasty", "horrible","tasty", "horrible","tasty", "horrible","tasty", "horrible"]
+    var reviews: Reviews!
     var spot: Spot!
     
     let regioDistance: CLLocationDegrees = 750.0
@@ -39,6 +39,7 @@ class SpotDetailViewController: UIViewController {
             spot = Spot()
         }
         setupMapView()
+        reviews = Reviews()
         updateUserInterface()
     }
     
@@ -52,6 +53,23 @@ class SpotDetailViewController: UIViewController {
         nameTextField.text = spot.name
         addressTextField.text = spot.address
         updateMap()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        updateFromInterface()
+        switch segue.identifier ?? "" {
+        case "AddReview":
+            let navigationController = segue.destination as! UINavigationController
+            let destination = navigationController.viewControllers.first as! ReviewTableViewController
+            destination.spot = spot
+        case "ShowReview":
+            let destination = segue.destination as! ReviewTableViewController
+            let selectedIndexPath = tableView.indexPathForSelectedRow!
+            destination.review = reviews.reviewArray[selectedIndexPath.row]
+            destination.spot = spot
+        default:
+            print("Could not find identifier for segue")
+        }
     }
     
     func updateMap() {
@@ -217,11 +235,12 @@ extension SpotDetailViewController: CLLocationManagerDelegate {
 
 extension SpotDetailViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return reviews.count
+        return reviews.reviewArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell", for: indexPath)
+        
         return cell
     }
     
