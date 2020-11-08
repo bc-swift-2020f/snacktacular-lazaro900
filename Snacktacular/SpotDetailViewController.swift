@@ -26,6 +26,10 @@ class SpotDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -68,6 +72,10 @@ class SpotDetailViewController: UIViewController {
         } else {
             navigationController?.popViewController(animated: true)
         }
+    }
+    @IBAction func ratingButtonPressed(_ sender: UIButton) {
+        //TODO: check if spot was saved
+        performSegue(withIdentifier: "AddReview", sender: nil)
     }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
