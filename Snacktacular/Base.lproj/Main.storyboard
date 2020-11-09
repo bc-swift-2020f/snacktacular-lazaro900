@@ -279,24 +279,15 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReviewCell" id="pih-ft-S72" customClass="SpotReviewTableViewCell" customModule="Snacktacular" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="408" width="320" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReviewCell" rowHeight="50" id="pih-ft-S72" customClass="SpotReviewTableViewCell" customModule="Snacktacular" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="408" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pih-ft-S72" id="Qh1-13-SUN">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFC-DX-H4E">
-                                                    <rect key="frame" x="111" y="0.0" width="116" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="lhp-yu-H7h"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Tc-Vy-oXx">
-                                                    <rect key="frame" x="16" y="23" width="304" height="14.5"/>
+                                                    <rect key="frame" x="16" y="23" width="304" height="21"/>
                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -341,24 +332,37 @@
                                                         </imageView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="15" id="9gS-z1-pG0"/>
-                                                        <constraint firstAttribute="width" constant="79" id="sDg-bh-4by"/>
+                                                        <constraint firstItem="WRt-e3-qI3" firstAttribute="leading" secondItem="99U-2U-lKm" secondAttribute="trailing" constant="1" id="Ppu-J3-oUY"/>
                                                     </constraints>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFC-DX-H4E">
+                                                    <rect key="frame" x="110" y="3" width="116" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="rFC-DX-H4E" firstAttribute="leading" secondItem="xvm-T1-SWr" secondAttribute="trailing" constant="16" id="7Jk-6M-Hfm"/>
-                                                <constraint firstAttribute="trailing" secondItem="6Tc-Vy-oXx" secondAttribute="trailing" id="JHA-Dh-b6a"/>
-                                                <constraint firstItem="6Tc-Vy-oXx" firstAttribute="top" secondItem="rFC-DX-H4E" secondAttribute="bottom" constant="2" id="M4Z-Hc-JxN"/>
-                                                <constraint firstItem="xvm-T1-SWr" firstAttribute="top" secondItem="Qh1-13-SUN" secondAttribute="top" constant="3" id="Ndj-hb-k8P"/>
-                                                <constraint firstItem="rFC-DX-H4E" firstAttribute="top" secondItem="Qh1-13-SUN" secondAttribute="top" id="Ole-M0-CWg"/>
-                                                <constraint firstItem="xvm-T1-SWr" firstAttribute="leading" secondItem="Qh1-13-SUN" secondAttribute="leading" constant="16" id="nR0-XI-Lxq"/>
-                                                <constraint firstItem="6Tc-Vy-oXx" firstAttribute="leading" secondItem="Qh1-13-SUN" secondAttribute="leading" constant="16" id="pw3-Kc-5sc"/>
+                                                <constraint firstItem="xvm-T1-SWr" firstAttribute="leading" secondItem="Qh1-13-SUN" secondAttribute="leading" constant="16" id="0cz-ay-Mzj"/>
+                                                <constraint firstItem="rFC-DX-H4E" firstAttribute="top" secondItem="Qh1-13-SUN" secondAttribute="top" constant="3" id="6Nt-cM-Dgq"/>
+                                                <constraint firstItem="xvm-T1-SWr" firstAttribute="top" secondItem="Qh1-13-SUN" secondAttribute="top" constant="3" id="Cso-E2-2iB"/>
+                                                <constraint firstItem="6Tc-Vy-oXx" firstAttribute="top" secondItem="xvm-T1-SWr" secondAttribute="bottom" constant="5" id="D0C-sF-K2K"/>
+                                                <constraint firstAttribute="trailing" secondItem="rFC-DX-H4E" secondAttribute="trailing" constant="94" id="JMM-uy-zf9"/>
+                                                <constraint firstItem="rFC-DX-H4E" firstAttribute="leading" secondItem="xvm-T1-SWr" secondAttribute="trailing" constant="15" id="PKX-iM-0Rc"/>
+                                                <constraint firstAttribute="trailing" secondItem="6Tc-Vy-oXx" secondAttribute="trailing" id="S9N-Zd-JHR"/>
+                                                <constraint firstAttribute="bottom" secondItem="6Tc-Vy-oXx" secondAttribute="bottom" constant="6" id="ZTe-rF-8hk"/>
+                                                <constraint firstItem="6Tc-Vy-oXx" firstAttribute="leading" secondItem="Qh1-13-SUN" secondAttribute="leading" constant="16" id="qte-QV-n70"/>
+                                                <constraint firstAttribute="bottom" secondItem="rFC-DX-H4E" secondAttribute="bottom" constant="20" symbolic="YES" id="r4Z-p6-BBR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="reviewTextLabel" destination="6Tc-Vy-oXx" id="UEL-4X-Phf"/>
                                             <outlet property="reviewTitleLabel" destination="rFC-DX-H4E" id="knM-Od-qJP"/>
+                                            <outletCollection property="starImageConnection" destination="xBJ-Lv-xOq" collectionClass="NSMutableArray" id="9bJ-eS-FVQ"/>
+                                            <outletCollection property="starImageConnection" destination="r86-nl-xCv" collectionClass="NSMutableArray" id="BNy-Rp-fvo"/>
+                                            <outletCollection property="starImageConnection" destination="99U-2U-lKm" collectionClass="NSMutableArray" id="lgd-Id-ezy"/>
+                                            <outletCollection property="starImageConnection" destination="WRt-e3-qI3" collectionClass="NSMutableArray" id="ymI-ys-5lN"/>
+                                            <outletCollection property="starImageConnection" destination="UlR-zq-Odk" collectionClass="NSMutableArray" id="TEc-LZ-bVI"/>
                                             <segue destination="NRp-Zb-oLf" kind="show" identifier="ShowReview" id="aME-EP-5Td"/>
                                         </connections>
                                     </tableViewCell>
@@ -501,8 +505,11 @@
                                                             <state key="normal" image="star" catalog="system">
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="32"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="starButtonPressed:" destination="NRp-Zb-oLf" eventType="touchUpInside" id="FPX-1d-o00"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGJ-eq-Ig1">
+                                                        <button opaque="NO" tag="1" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGJ-eq-Ig1">
                                                             <rect key="frame" x="42" y="0.0" width="40" height="40"/>
                                                             <color key="backgroundColor" name="UI Element Background"/>
                                                             <constraints>
@@ -513,8 +520,11 @@
                                                             <state key="normal" image="star" catalog="system">
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="32"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="starButtonPressed:" destination="NRp-Zb-oLf" eventType="touchUpInside" id="dY6-kr-zdW"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5L-kg-QrS">
+                                                        <button opaque="NO" tag="2" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5L-kg-QrS">
                                                             <rect key="frame" x="84" y="0.0" width="40" height="40"/>
                                                             <color key="backgroundColor" name="UI Element Background"/>
                                                             <constraints>
@@ -525,8 +535,11 @@
                                                             <state key="normal" image="star" catalog="system">
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="32"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="starButtonPressed:" destination="NRp-Zb-oLf" eventType="touchUpInside" id="bLa-2y-D4t"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMk-G5-dKd">
+                                                        <button opaque="NO" tag="3" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMk-G5-dKd">
                                                             <rect key="frame" x="126" y="0.0" width="40" height="40"/>
                                                             <color key="backgroundColor" name="UI Element Background"/>
                                                             <constraints>
@@ -537,8 +550,11 @@
                                                             <state key="normal" image="star" catalog="system">
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="32"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="starButtonPressed:" destination="NRp-Zb-oLf" eventType="touchUpInside" id="M1p-rB-LGa"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1z-oe-vlI">
+                                                        <button opaque="NO" tag="4" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1z-oe-vlI">
                                                             <rect key="frame" x="168" y="0.0" width="40" height="40"/>
                                                             <color key="backgroundColor" name="UI Element Background"/>
                                                             <constraints>
@@ -549,6 +565,9 @@
                                                             <state key="normal" image="star" catalog="system">
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="32"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="starButtonPressed:" destination="NRp-Zb-oLf" eventType="touchUpInside" id="NcG-LF-7AD"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>
@@ -733,6 +752,11 @@
                         <outlet property="reviewTextView" destination="uqY-yr-xJr" id="F8D-63-O3h"/>
                         <outlet property="reviewTitleLabel" destination="sfz-an-b5J" id="qPA-tX-6Me"/>
                         <outlet property="saveBarButton" destination="J4i-Uh-5uh" id="Hid-CV-Xjo"/>
+                        <outletCollection property="starButtionCollection" destination="m41-QP-byA" collectionClass="NSMutableArray" id="RWj-HN-Z2C"/>
+                        <outletCollection property="starButtionCollection" destination="cGJ-eq-Ig1" collectionClass="NSMutableArray" id="DY8-cx-jwf"/>
+                        <outletCollection property="starButtionCollection" destination="b5L-kg-QrS" collectionClass="NSMutableArray" id="WU4-y5-pm2"/>
+                        <outletCollection property="starButtionCollection" destination="W1z-oe-vlI" collectionClass="NSMutableArray" id="p7W-CD-iWc"/>
+                        <outletCollection property="starButtionCollection" destination="KMk-G5-dKd" collectionClass="NSMutableArray" id="dtR-0x-0JH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRR-ar-1DK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

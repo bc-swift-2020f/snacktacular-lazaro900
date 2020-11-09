@@ -19,8 +19,21 @@ class ReviewTableViewController: UITableViewController {
     @IBOutlet weak var reviewTextView: UITextView!
     @IBOutlet weak var deleteButton: UIButton!
     
+    @IBOutlet var starButtionCollection: [UIButton]!
+    
     var review: Review!
     var spot: Spot!
+    var rating = 0 {
+        didSet {
+            for starButton in starButtionCollection {
+                let imageName = (starButton.tag < rating ? "star.fill" : "star")
+                starButton.setImage(UIImage(systemName: imageName), for: .normal)
+                starButton.tintColor = (starButton.tag < rating ? .systemRed : .darkText)
+            }
+            print(">> new rating: \(rating)")
+            review.rating = rating
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +53,7 @@ class ReviewTableViewController: UITableViewController {
         addressLabel.text = spot.address
         reviewTitleLabel.text = review.title
         reviewTextView.text = review.text
+        rating = review.rating
     }
     
     func updateFromUserInterface() {
@@ -77,4 +91,10 @@ class ReviewTableViewController: UITableViewController {
     }
     @IBAction func reviewTitleChanged(_ sender: UITextField) {
     }
+    
+    
+    @IBAction func starButtonPressed(_ sender: UIButton) {
+        rating = sender.tag + 1
+    }
+    
 }
