@@ -17,6 +17,8 @@ class SpotDetailViewController: UIViewController {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var cancelBarButton: UIBarButtonItem!
+    @IBOutlet weak var saveBarButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     var reviews: Reviews!
     var spot: Spot!
@@ -37,6 +39,11 @@ class SpotDetailViewController: UIViewController {
         getLocation()
         if spot == nil {
             spot = Spot()
+        } else {
+            disableTextEditing()
+            cancelBarButton.hide()
+            saveBarButton.hide()
+            navigationController?.setToolbarHidden(true, animated: true)
         }
         setupMapView()
         reviews = Reviews()
@@ -56,6 +63,15 @@ class SpotDetailViewController: UIViewController {
         
     }
     
+    func disableTextEditing() {
+        nameTextField.isEnabled = false
+        addressTextField.isEnabled = false
+        nameTextField.backgroundColor = .clear
+        addressTextField.backgroundColor = .clear
+        nameTextField.borderStyle = .none
+        addressTextField.borderStyle = .none
+    }
+    
     func updateUserInterface() {
         nameTextField.text = spot.name
         addressTextField.text = spot.address
@@ -73,6 +89,15 @@ class SpotDetailViewController: UIViewController {
             let destination = segue.destination as! ReviewTableViewController
             let selectedIndexPath = tableView.indexPathForSelectedRow!
             destination.review = reviews.reviewArray[selectedIndexPath.row]
+            destination.spot = spot
+        case "AddPhoto":
+            let navigationController = segue.destination as! UINavigationController
+            let destination = navigationController.viewControllers.first as! PhotoViewController
+            destination.spot = spot
+        case "ShowPhoto":
+            let destination = segue.destination as! PhotoViewController
+            //let selectedIndexPath = tableView.indexPathForSelectedRow!
+            //destination.review = reviews.reviewArray[selectedIndexPath.row]
             destination.spot = spot
         default:
             print("Could not find identifier for segue")
@@ -94,6 +119,10 @@ class SpotDetailViewController: UIViewController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "Save", style: .default) { (_) in
             self.spot.saveData { (success) in
+                self.saveBarButton.title = "Done"
+                self.cancelBarButton.hide()
+                self.navigationController?.setToolbarHidden(true, animated: true)
+                self.disableTextEditing()
                 self.performSegue(withIdentifier: segueIdentifier, sender: nil)
             }
         }
@@ -111,11 +140,20 @@ class SpotDetailViewController: UIViewController {
             navigationController?.popViewController(animated: true)
         }
     }
-    @IBAction func ratingButtonPressed(_ sender: UIButton) {
+    
+    @IBAction func photoButtonPressed(_ sender: UIButton) {
         if spot.documentID == "" {
             saveCancelAlert(title: "This Venue Has Not Been Saved", message: "You must save this venue before you can review it", segueIdentifier: "AddReview")
         } else {
             performSegue(withIdentifier: "AddReview", sender: nil)
+        }
+    }
+    
+    @IBAction func ratingButtonPressed(_ sender: UIButton) {
+        if spot.documentID == "" {
+            saveCancelAlert(title: "This Venue Has Not Been Saved", message: "You must save this venue before you can review it", segueIdentifier: "AddPhoto")
+        } else {
+            performSegue(withIdentifier: "AddPhoto", sender: nil)
         }
     }
     
@@ -127,6 +165,16 @@ class SpotDetailViewController: UIViewController {
             } else {
                 self.oneButtonAlert(title: "Save Failed", message: "Data would not save to the cloud")
             }
+        }
+    }
+    
+    @IBAction func nameFieldChanged(_ sender: UITextField) {
+        let noSpaces = nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if noSpaces != "" {
+            saveBarButton.isEnabled = true
+        } else {
+            saveBarButton.isEnabled = false
         }
     }
     
