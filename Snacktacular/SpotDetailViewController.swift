@@ -67,6 +67,14 @@ class SpotDetailViewController: UIViewController {
         
         reviews.loadData(spot: spot) {
             self.tableView.reloadData()
+            if self.reviews.reviewArray.count == 0 {
+                self.ratingLabel.text = "-.-"
+            } else {
+                let Sum = self.reviews.reviewArray.reduce(0) { $0 + $1.rating}
+                var avgRating = Double(Sum) / Double(self.reviews.reviewArray.count)
+                avgRating = ((avgRating * 10).rounded()) / 10
+                self.ratingLabel.text = "\(avgRating)"
+            }
         }
         
         photos.loadData(spot: spot) {
