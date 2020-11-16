@@ -16,12 +16,16 @@ class SpotDetailViewController: UIViewController {
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
-    
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
     @IBOutlet weak var saveBarButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
+    
+    var imagePickerController = UIImagePickerController()
     var reviews: Reviews!
     var spot: Spot!
+    var photo: Photo!
+    var photos: Photos!
     
     let regioDistance: CLLocationDegrees = 750.0
     var locationManager: CLLocationManager!
@@ -35,6 +39,9 @@ class SpotDetailViewController: UIViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        imagePickerController.delegate = self
         
         getLocation()
         if spot == nil {
@@ -47,13 +54,23 @@ class SpotDetailViewController: UIViewController {
         }
         setupMapView()
         reviews = Reviews()
+        photos = Photos()
         updateUserInterface()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        if spot.documentID != "" {
+            self.navigationController?.setToolbarHidden(true, animated: true)
+        }
+        
         reviews.loadData(spot: spot) {
             self.tableView.reloadData()
+        }
+        
+        photos.loadData(spot: spot) {
+            self.collectionView.reloadData()
         }
     }
     
@@ -94,10 +111,15 @@ class SpotDetailViewController: UIViewController {
             let navigationController = segue.destination as! UINavigationController
             let destination = navigationController.viewControllers.first as! PhotoViewController
             destination.spot = spot
+            destination.photo = photo
         case "ShowPhoto":
             let destination = segue.destination as! PhotoViewController
-            //let selectedIndexPath = tableView.indexPathForSelectedRow!
-            //destination.review = reviews.reviewArray[selectedIndexPath.row]
+            guard let selectedIndexPath = collectionView.indexPathsForSelectedItems?.first
+            else {
+                print("Error: could not get selected collection view item")
+                return
+            }
+            destination.photo = photos.photoArray[selectedIndexPath.row]
             destination.spot = spot
         default:
             print("Could not find identifier for segue")
@@ -123,7 +145,12 @@ class SpotDetailViewController: UIViewController {
                 self.cancelBarButton.hide()
                 self.navigationController?.setToolbarHidden(true, animated: true)
                 self.disableTextEditing()
-                self.performSegue(withIdentifier: segueIdentifier, sender: nil)
+                
+                if segueIdentifier == "AddReview" {
+                    self.performSegue(withIdentifier: segueIdentifier, sender: nil)
+                } else {
+                    self.camaraOrLibraryAlert()
+                }
             }
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -141,19 +168,40 @@ class SpotDetailViewController: UIViewController {
         }
     }
     
+    func camaraOrLibraryAlert() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { (_) in
+            self.accessPhotoLibrary()
+        }
+        let camaraAction = UIAlertAction(title: "Camara", style: .default) { (_) in
+            self.accessCamara()
+        }
+            
+            
+        let cancelAction = UIAlertAction(title: "Cance", style: .cancel, handler: nil)
+            
+        alertController.addAction(photoLibraryAction)
+        alertController.addAction(camaraAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+
+            
+    }
+    
     @IBAction func photoButtonPressed(_ sender: UIButton) {
         if spot.documentID == "" {
-            saveCancelAlert(title: "This Venue Has Not Been Saved", message: "You must save this venue before you can review it", segueIdentifier: "AddReview")
+            saveCancelAlert(title: "This Venue Has Not Been Saved", message: "You must save this venue before you can review it", segueIdentifier: "AddPhoto")
         } else {
-            performSegue(withIdentifier: "AddReview", sender: nil)
+            camaraOrLibraryAlert()
         }
     }
     
     @IBAction func ratingButtonPressed(_ sender: UIButton) {
         if spot.documentID == "" {
-            saveCancelAlert(title: "This Venue Has Not Been Saved", message: "You must save this venue before you can review it", segueIdentifier: "AddPhoto")
+            saveCancelAlert(title: "This Venue Has Not Been Saved", message: "You must save this venue before you can review it", segueIdentifier: "AddReview")
         } else {
-            performSegue(withIdentifier: "AddPhoto", sender: nil)
+            performSegue(withIdentifier: "AddReview", sender: nil)
         }
     }
     
@@ -317,3 +365,54 @@ extension SpotDetailViewController: UITableViewDataSource, UITableViewDelegate {
     
     
 }
+
+extension SpotDetailViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        photo = Photo()
+        
+        if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            photo.image = editedImage
+        } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            photo.image = originalImage
+
+        }
+        dismiss(animated: true) {
+            self.performSegue(withIdentifier: "AddPhoto", sender: nil)
+        }
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func accessCamara() {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            
+        } else {
+            self.oneButtonAlert(title: "Camara Not Available", message: "There Is No Camara On This Device")
+        }
+        
+    }
+    
+    func accessPhotoLibrary() {
+        imagePickerController.sourceType = .photoLibrary
+        present(imagePickerController, animated: true, completion: nil)
+        
+    }
+    
+}
+
+extension SpotDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return photos.photoArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let photoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! SpotPhotoCollectionViewCell
+        photoCell.spot = spot
+        photoCell.photo = photos.photoArray[indexPath.row]
+        return photoCell
+    }
+    
+}
+
