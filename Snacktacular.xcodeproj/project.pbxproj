@@ -142,6 +142,56 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F11D23E42573476E008575D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F11C3BD2254E3A3C004F9A21 /* Spot.swift */,
+				F174A857254F491F000AF587 /* Spots.swift */,
+				F1D1047E25588B030065F1C6 /* Review.swift */,
+				F1D1048325588F280065F1C6 /* Reviews.swift */,
+				F16772962561ACD10052CA6C /* Photo.swift */,
+				F1EFB2882561C30800AE79B5 /* Photos.swift */,
+				F11D234C2572FAB5008575D4 /* SnackUser.swift */,
+				F11D23DF2573090F008575D4 /* SnackUsers.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F11D23E5257347C1008575D4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F15354DF254DD6CD000A7855 /* LoginViewController.swift */,
+				F1535580254DEFE9000A7855 /* SpotDetailViewController.swift */,
+				F13695B92557931300825C49 /* ReviewTableViewController.swift */,
+				F134E0222560E88200DEC433 /* PhotoViewController.swift */,
+				F11D23D5257307B4008575D4 /* SnackUserViewController.swift */,
+				F11D23DA25730823008575D4 /* SnackUserTableViewCell.swift */,
+				F1535576254DEAFA000A7855 /* SpotListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F11D23E6257347E7008575D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F1EFB28D2561C68300AE79B5 /* SpotPhotoCollectionViewCell.swift */,
+				F1D104EB2558A31D0065F1C6 /* SpotReviewTableViewCell.swift */,
+				F153557B254DEC8D000A7855 /* SpotTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F11D23E725734849008575D4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F11C3BD7254E487E004F9A21 /* UIViewController + alert.swift */,
+				F134E0182560CD6200DEC433 /* UIView+addBorder.swift */,
+				F134E01D2560CE0B00DEC433 /* UIBarButtonItem+hide.swift */,
+				F174A85C254F5359000AF587 /* APIKeys.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		F15354CF254DD6CD000A7855 = {
 			isa = PBXGroup;
 			children = (
@@ -169,33 +219,15 @@
 			children = (
 				F15354DB254DD6CD000A7855 /* AppDelegate.swift */,
 				F15354DD254DD6CD000A7855 /* SceneDelegate.swift */,
-				F11C3BD2254E3A3C004F9A21 /* Spot.swift */,
-				F174A857254F491F000AF587 /* Spots.swift */,
-				F1D1047E25588B030065F1C6 /* Review.swift */,
-				F1D1048325588F280065F1C6 /* Reviews.swift */,
-				F16772962561ACD10052CA6C /* Photo.swift */,
-				F1EFB2882561C30800AE79B5 /* Photos.swift */,
-				F11D234C2572FAB5008575D4 /* SnackUser.swift */,
-				F11D23DF2573090F008575D4 /* SnackUsers.swift */,
-				F15354DF254DD6CD000A7855 /* LoginViewController.swift */,
+				F11D23E42573476E008575D4 /* Models */,
+				F11D23E5257347C1008575D4 /* Controllers */,
+				F11D23E6257347E7008575D4 /* Views */,
+				F11D23E725734849008575D4 /* Utilities */,
 				F15354E1254DD6CD000A7855 /* Main.storyboard */,
-				F1535580254DEFE9000A7855 /* SpotDetailViewController.swift */,
-				F1EFB28D2561C68300AE79B5 /* SpotPhotoCollectionViewCell.swift */,
-				F1D104EB2558A31D0065F1C6 /* SpotReviewTableViewCell.swift */,
-				F13695B92557931300825C49 /* ReviewTableViewController.swift */,
-				F134E0222560E88200DEC433 /* PhotoViewController.swift */,
-				F11D23D5257307B4008575D4 /* SnackUserViewController.swift */,
-				F11D23DA25730823008575D4 /* SnackUserTableViewCell.swift */,
-				F11C3BD7254E487E004F9A21 /* UIViewController + alert.swift */,
-				F134E0182560CD6200DEC433 /* UIView+addBorder.swift */,
-				F134E01D2560CE0B00DEC433 /* UIBarButtonItem+hide.swift */,
-				F1535576254DEAFA000A7855 /* SpotListViewController.swift */,
-				F153557B254DEC8D000A7855 /* SpotTableViewCell.swift */,
 				F15354E4254DD6D1000A7855 /* Assets.xcassets */,
 				F15354E6254DD6D1000A7855 /* LaunchScreen.storyboard */,
 				F15354E9254DD6D1000A7855 /* Info.plist */,
 				F153552F254DDA4C000A7855 /* GoogleService-Info.plist */,
-				F174A85C254F5359000AF587 /* APIKeys.swift */,
 			);
 			path = Snacktacular;
 			sourceTree = "<group>";
